@@ -1,0 +1,18 @@
+
+
+service: webscrappingproject
+
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+
+
+functions:
+  myFunction:
+    handler: handler.myFunction
+    layers:
+      - arn:aws:lambda:REGION:ACCOUNT_ID:layer:puppeteer:1
